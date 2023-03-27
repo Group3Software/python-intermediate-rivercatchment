@@ -35,7 +35,7 @@ def read_variable_from_csv(filename):
     return newdataset
 
 def daily_total(data):
-    """Calculate the daily total of a 2d data array.
+    """Calculate the daily total of a 2D data array.
     Index must be np.datetime64 compatible format."""
     return data.groupby(data.index.date).sum()
 
