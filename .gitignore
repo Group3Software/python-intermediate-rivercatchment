@@ -9,6 +9,10 @@
 *.png
 
 # Python runtime
-*.pyc
+*.py
 *.egg-info
 .pytest_cache
+
+# Virtual environments
+venv/
+.venv/
