@@ -103,4 +103,3 @@ def test_daily_mean(test_data, test_index, test_columns,
     pdt.assert_frame_equal(
         daily_mean(pd.DataFrame(data=test_data, index=test_index, columns=test_columns)),
         pd.DataFrame(data=expected_data, index=expected_index, columns=expected_columns))
-    
