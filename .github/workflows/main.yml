@@ -21,4 +21,4 @@ jobs:
           pip3 install -r requirements.txt
       - name: Test with PyTest
         run: |
-          python -m pytest --cov=catchment.models test/test_models.py
+          python -m pytest --cov=catchment.models tests/test_models.py
