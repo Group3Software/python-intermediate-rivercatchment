@@ -8,6 +8,13 @@ time across all sites.
 """
 
 import pandas as pd
+import numpy as np
+
+
+def data_normalise(data):
+    """Normalise any given 2D data array"""
+    max_array = np.array(np.max(data, axis=0))
+    return data / max_array[np.newaxis, :]
 
 
 def read_variable_from_csv(filename):
