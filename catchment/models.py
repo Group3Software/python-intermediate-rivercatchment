@@ -63,3 +63,18 @@ def daily_min(data):
     """Calculate the daily min of a 2d data array.
     Index must be np.datetime64 compatible format."""
     return data.groupby(data.index.date).min()
+
+
+class Site:
+    def __init__(self, name):
+        self.name = name
+        self.measurements = {}
+
+    def add_measurement(self, measurement_id, data):
+        if measurement_id in self.measurements.keys():
+            self.measurements[measurement_id] = \
+                pd.concat([self.measurements[measurement_id], data])
+
+        else:
+            self.measurements[measurement_id] = data
+            self.measurements[measurement_id].name = measurement_id
