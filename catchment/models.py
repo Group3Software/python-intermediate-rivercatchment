@@ -56,3 +56,6 @@ def daily_min(data):
     Index must be np.datetime64 compatible format."""
     return data.groupby(data.index.date).min()
 
+
+def number_squaring(a):
+    return a**2

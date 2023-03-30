@@ -49,3 +49,21 @@ def test_daily_mean_integers():
 
     # Need to use Pandas testing functions to compare arrays
     pdt.assert_frame_equal(daily_mean(test_input), test_result)
+
+
+def test_number_squaring():
+
+    from catchment.models import number_squaring
+
+    test_input = pd.DataFrame(
+        data = [[1],
+                [3]]
+
+    )
+
+    test_result = pd.DataFrame(
+        data = [[4],
+                [9]]
+    )
+
+    pdt.assert_frame_equal(number_squaring(test_input), test_result)
