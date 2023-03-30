@@ -33,7 +33,7 @@ def test_daily_mean_integers():
     from catchment.models import daily_mean
 
     test_input = pd.DataFrame(
-                     data=[[1, 2],
+                     data=[[0, 2],
                            [3, 4],
                            [5, 6]],
                      index=[pd.to_datetime('2000-01-01 01:00'),
