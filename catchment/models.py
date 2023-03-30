@@ -65,6 +65,10 @@ def daily_min(data):
     return data.groupby(data.index.date).min()
 
 
+def daily_std(data):
+    return data.groupby(data.index.date).std()
+
+
 class Location:
     def __init__(self, name):
         self.name = name
