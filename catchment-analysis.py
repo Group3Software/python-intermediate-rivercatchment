@@ -26,15 +26,22 @@ def main(args):
         views.visualize(view_data)
 
 
+# In the terminal, run python catchment-analysis.py data/rain_data_2015-12.csv
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='A basic environmental data management system')
 
     parser.add_argument(
-        'infiles',
-        nargs='+',
-        help='Input CSV(s) containing measurement data')
+        'infiles',  # run python catchment-analysis.py -h in the terminal to get help information
+        nargs='+',  # the + means: give me at least one argument but could be more
+        help='Input CSV(s) containing measurement data')  # Explanation of what's happening (help information)
+    # You can specify the below argument when you run the script
+    # python catchment-analysis.py -m 'measure' data/rain_data_2015-12.csv
+    # The argument is required and it has to be a string; this is not doing anything to the visualisation function
+    parser.add_argument('-m', '--measurements',
+                        help='Name of measurements data series to load',
+                        required=True)
     
     args = parser.parse_args()
 
-    main(args)
+    main(args) # If the if statement
